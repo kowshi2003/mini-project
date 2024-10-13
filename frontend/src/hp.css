@@ -1,0 +1,298 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  text-align: center;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #000000, #ffffff);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container for nav-links and logout button */
+.nav-auth-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 20px; /* Space between nav-links and logout button */
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links a:hover {
+  color: #ff4b5c; /* Hover effect for nav links */
+  text-decoration: underline;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #ff4b5c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e03e49;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.logo {
+  font-size: 48px; /* Increased font size for visibility */
+  font-weight: bold;
+  color: #fff; /* White color for better visibility */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */
+  cursor: pointer; /* Change cursor on hover */
+  position: relative; /* Required for pseudo-elements */
+  animation: logoFadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+/* Glowing Effect */
+@keyframes glow {
+  0%, 100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+      text-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 255, 0, 0.6);
+  }
+}
+
+/* Firing Animation */
+@keyframes fire {
+  0% {
+      opacity: 0.8;
+      transform: translateY(0);
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(-5px); /* Slightly move up */
+  }
+  100% {
+      opacity: 0.8;
+      transform: translateY(0);
+  }
+}
+
+/* Thunder Animation */
+@keyframes thunder {
+  0% {
+      color: white; /* Normal color */
+  }
+  25% {
+      color: yellow; /* Flash yellow */
+  }
+  50% {
+      color: white; /* Back to normal */
+  }
+  75% {
+      color: yellow; /* Flash yellow */
+  }
+  100% {
+      color: white; /* Back to normal */
+  }
+}
+
+/* Applying animations */
+.logo:hover {
+  animation: glow 1s infinite alternate, fire 0.5s infinite alternate; /* Combine animations */
+  animation: glow 1s infinite alternate, thunder 0.5s infinite alternate; /* Add thunder on hover */
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('https://wallpapercave.com/wp/wp5901457.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  margin-top: 60px; /* To offset the fixed navbar */
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: auto;
+}
+.hero h1 {
+  font-size: 3rem; /* Adjust the size as needed */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8), /* White glow */
+    0 0 10px rgba(0, 255, 255, 0.7), /* Cyan glow */
+    0 0 15px rgba(0, 0, 255, 0.6); /* Blue glow */
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Services Section */
+.services {
+  background-color: #000000;
+  padding: 50px 20px;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+  cursor: pointer;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Hover effect for service boxes */
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Elevated effect */
+}
+
+/* Facilities Section */
+.facilities {
+  background-color: #000000;
+  padding: 50px 20px;
+}
+
+.facilities h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.facilities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.facility {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+.facility h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.facility p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Hover effect for facility boxes */
+.facility:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Section */
+.about {
+  padding: 50px 20px;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Instagram Logo */
+.instagram-logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.instagram-logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.instagram-logo:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.footer p {
+  margin: 5px 0;
+}

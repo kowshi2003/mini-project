@@ -1,0 +1,122 @@
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full screen height */
+        overflow: hidden;
+      }
+      
+      .video-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        filter: brightness(70%); /* Adjust brightness if needed */
+      }
+
+
+.bgr{
+    background-image: linear-gradient(to left,red,rgb(255, 251, 0));
+    height: auto;
+}
+.image{
+    width: 99%;
+    height: 500px;
+    z-index: 0;
+    margin: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.image-item img {
+    width: 300px; /* Make images responsive */
+    height: 500px; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Spacing between items */
+}
+
+.image-item {
+    text-align: center; /* Center the description and image */
+    border-color: black;
+    box-shadow: black;
+}
+
+.image-description {
+    margin-bottom: 5px; /* Spacing between description and image */
+    font-weight: bold; /* Bold text for descriptions */
+    color: blueviolet;
+    /* background-color: bisque; */
+}
+
+.image-inner img {
+    width: 100%; /* Make images responsive */
+    height: 300px; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    border-radius: 10px;
+}
+
+
+.image-inner img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+} */
+
+
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Spacing between items */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center the content */
+    padding: 10px;
+    border: 2px solid #000; /* Black border around each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+    background-color: #f9f9f9; /* Background color for the box */
+    border-radius: 10px;
+}
+
+.image-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+.image-inner {
+    text-align: center;
+}
+
+.image-inner img {
+    width: 100%; /* Make images responsive */
+    height: 200px; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-inner img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.image-description {
+    margin-top: 10px; /* Spacing between image and description */
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 18px; /* Adjust font size for better visibility */
+} 

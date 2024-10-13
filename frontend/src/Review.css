@@ -1,0 +1,42 @@
+/* Review.css */
+.review-section {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .reviews-list {
+    margin-bottom: 20px;
+  }
+  
+  .review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .review-item h4 {
+    margin: 0;
+  }
+  
+  .review-item p {
+    margin: 5px 0 0;
+  }
+  
+  .review-form input, .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .review-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .review-form button:hover {
+    background-color: #0056b3;
+  }
+  
